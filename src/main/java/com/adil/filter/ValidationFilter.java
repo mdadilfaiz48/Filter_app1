@@ -36,7 +36,7 @@ public class ValidationFilter extends HttpFilter implements Filter {
 			String age = request.getParameter("sage");
 			String mobile = request.getParameter("smobile");
 			String id = request.getParameter("sid");
-			
+			// validation logic
 			boolean flag = true;
 			if (id == null || id.equals("")) {
 				sid_error = "Id is required";
