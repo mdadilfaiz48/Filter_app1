@@ -28,6 +28,7 @@ public class ValidationFilter extends HttpFilter implements Filter {
 		String sid_error = "", sname_error = "", semail_error = "", sage_error = "", smobile_error = "";
 
 		try {
+			// fetch data from request and validate
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
 			String name = request.getParameter("sname");
