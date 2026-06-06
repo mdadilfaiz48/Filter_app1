@@ -15,6 +15,8 @@ public class RegistrationServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+	   // intered in doPost Method 
+		
 		try {
 			// fetch data from request and validate
 		response.setContentType("text/html");
