@@ -14,7 +14,7 @@ public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		// call service method
 		try {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
