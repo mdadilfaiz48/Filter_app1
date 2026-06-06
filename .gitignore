@@ -2,11 +2,13 @@
 .classpath
 .project
 .settings/
+.idea/
 
 # Build folder
 build/
 bin/
 target/
+
 
 # Compiled Java files
 *.class
