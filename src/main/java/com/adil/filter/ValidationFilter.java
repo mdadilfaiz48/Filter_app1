@@ -25,6 +25,8 @@ public class ValidationFilter extends HttpFilter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
+
+		// Error Message
 		// this properties for display error message
 		String sid_error = "", sname_error = "", semail_error = "", sage_error = "", smobile_error = "";
 
