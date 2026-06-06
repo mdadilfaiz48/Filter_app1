@@ -1,6 +1,9 @@
 package com.adil.filter;
 
-import jakarta.servlet.Filter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.DirectoryStream.Filter;
+
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.FilterConfig;
 import jakarta.servlet.ServletException;
@@ -8,8 +11,6 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpFilter;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebFilter("/reg")
 public class ValidationFilter extends HttpFilter implements Filter {
@@ -61,6 +62,7 @@ public class ValidationFilter extends HttpFilter implements Filter {
 			if(flag==true) {
 				chain.doFilter(request, response);
 			}else {
+				// display error messages to user
 				out.println("<html>");
 				out.println("<body>");
 				out.println("<h1>Durga software solutions</h1>");
@@ -107,6 +109,12 @@ public class ValidationFilter extends HttpFilter implements Filter {
 
 	public void destroy() {
 
+	}
+
+	@Override
+	public boolean accept(Object entry) throws IOException {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
