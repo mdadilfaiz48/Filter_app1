@@ -62,6 +62,7 @@ public class ValidationFilter extends HttpFilter implements Filter {
 			if(flag==true) {
 				chain.doFilter(request, response);
 			}else {
+				// display error messages to user
                 // html code to display error messages with form
 				out.println("<html>");
 				out.println("<body>");
@@ -109,6 +110,12 @@ public class ValidationFilter extends HttpFilter implements Filter {
 
 	public void destroy() {
 
+	}
+
+	@Override
+	public boolean accept(Object entry) throws IOException {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
