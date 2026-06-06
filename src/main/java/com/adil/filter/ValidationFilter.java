@@ -63,6 +63,7 @@ public class ValidationFilter extends HttpFilter implements Filter {
 				chain.doFilter(request, response);
 			}else {
 				// display error messages to user
+                // html code to display error messages with form
 				out.println("<html>");
 				out.println("<body>");
 				out.println("<h1>Durga software solutions</h1>");
